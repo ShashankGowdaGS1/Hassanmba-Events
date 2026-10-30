@@ -1,6 +1,6 @@
 # Replacement image provenance
 
-The 19 replacement images were generated individually with the built-in imagegen tool. They are AI-created decoration concepts, not photographs of completed client events. The original collage crops are preserved in `original-collage-crops/`. The existing desktop and mobile hero images and the large royal mandap image were retained.
+The 19 replacement images were generated individually with the built-in imagegen tool. They are AI-created decoration concepts, not photographs of completed client events. The original collage crops were removed from the project at the user's request. The existing desktop and mobile hero images and the large royal mandap image were retained.
 
 Shared prompt for the second through nineteenth images: "Use case photorealistic-natural. Create one complete standalone editorial photograph for a premium Indian floral decoration website. Natural realistic flowers and materials, traditional South Indian heritage, elegant and credible, not a collage or grid. No people, no lettering, no logo, no watermark. Illustrative concept, not an actual project. Subject:"
 
@@ -25,3 +25,5 @@ Individual subjects:
 - `service-lotus-arrangement.webp`: A graceful arrangement of fresh pink lotus flowers and green leaves in a polished brass bowl, inspired by South Indian ceremonial decor, soft natural light. The filename `service-lotus-arrangement (1).webp` is an identical copy for compatibility.
 - `heritage-floral-swing.webp`: An elegant traditional carved wooden swing decorated with jasmine, marigolds and burgundy roses, South Indian heritage setting, soft natural daylight, complete swing, no people.
 - `cta-floral-jasmine-detail.webp`: Macro close-up of fresh ivory jasmine garland interwoven with a few delicate burgundy rose petals, softly blurred dark burgundy background, warm light and realistic petals.
+
+- `hero-mobile-complete.webp`: Newly generated standalone portrait of a complete South Indian wedding mandap, used for the mobile hero in place of the cropped desktop image.

@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/hero";
 import { SelectedCelebrations } from "@/components/home/selected-celebrations";
 import { DecorationServices } from "@/components/home/decoration-services";
 import { HeritageStory } from "@/components/home/heritage-story";
+import { BehindTheBlooms } from "@/components/home/behind-the-blooms";
 import { OurProcess } from "@/components/home/our-process";
 import { FAQ } from "@/components/home/faq";
 import { EventCTA } from "@/components/home/event-cta";
@@ -21,6 +22,8 @@ export default function HomePage() {
 
       {/* 04. Our Story — Rooted in Tradition (Deep Royal Burgundy Storytelling) */}
       <HeritageStory />
+
+      <BehindTheBlooms />
 
       {/* 05. From Vision to Celebration (3-Step Editorial Planning Timeline) */}
       <OurProcess />

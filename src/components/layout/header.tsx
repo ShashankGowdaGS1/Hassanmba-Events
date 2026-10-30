@@ -47,17 +47,20 @@ export function Header({ hasHeroOverlay = true, className }: HeaderProps) {
   // Mode A is active ONLY on homepage when hero is enabled AND not scrolled past threshold
   const isOverlayMode = pathname === "/" && hasHeroOverlay && !isScrolled;
 
+  const isCompact = pathname === "/" && isScrolled;
+
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-40 w-full transition-all duration-300 ease-in-out",
+    <header className={cn("sticky top-0 z-40 h-[68px] w-full pointer-events-none sm:h-[76px] lg:h-24", className)}>
+      <div
+        className={cn(
+        "pointer-events-auto w-full transition-[height,background-color,box-shadow,border-color] duration-300 ease-in-out h-[68px] sm:h-[76px]",
+        isCompact ? "lg:h-[76px]" : "lg:h-24",
         isOverlayMode
           ? "bg-gradient-to-b from-charcoal/80 to-transparent text-ivory border-b border-ivory/10 shadow-none"
           : "bg-ivory text-charcoal border-b border-gold-antique/25 shadow-ceremonial",
-        className
       )}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-[68px] sm:h-[76px] lg:h-24 flex items-center justify-between">
+      >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-full flex items-center justify-between">
         {/* LEFT REGION: Brand Logo & Wordmark */}
         <div className="flex items-center shrink-0">
           <BrandLogo
@@ -81,6 +84,7 @@ export function Header({ hasHeroOverlay = true, className }: HeaderProps) {
           {/* Mobile Navigation Trigger & Drawer */}
           <MobileNav isOverlay={isOverlayMode} />
         </div>
+      </div>
       </div>
     </header>
   );

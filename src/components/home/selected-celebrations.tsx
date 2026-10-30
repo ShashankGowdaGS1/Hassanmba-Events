@@ -11,89 +11,20 @@ import { cn } from "@/lib/utils";
 interface ShowcaseCardProps {
   item: CelebrationItem;
   className?: string;
-  isPrimary?: boolean;
 }
 
-function ShowcaseCard({ item, className, isPrimary = false }: ShowcaseCardProps) {
-  if (!isPrimary) {
-    return (
-      <Link
-        href="/our-work"
-        className={cn("group block w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-burgundy focus-visible:outline-offset-4", className)}
-        style={{ maxWidth: item.width }}
-      >
-        <div className="overflow-hidden bg-champagne/30">
-          <Image
-            src={item.imageSrc}
-            alt={`${item.title} — illustrative decoration concept`}
-            width={item.width}
-            height={item.height}
-            sizes={`(max-width: ${item.width}px) 100vw, ${item.width}px`}
-            className="block h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-          />
-        </div>
-        <div className="pt-3">
-          <p className="mb-1 font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-dark">
-            {item.category}
-          </p>
-          <h3 className="font-display text-lg font-semibold leading-tight text-burgundy transition-colors group-hover:text-gold-dark">
-            {item.title}
-          </h3>
-          <p className="mt-1 mb-0 font-body text-xs text-charcoal/70">{item.accentNote}</p>
-        </div>
-      </Link>
-    );
-  }
-
+function ShowcaseCard({ item, className }: ShowcaseCardProps) {
   return (
     <Link
       href="/our-work"
-      className={cn(
-        "group relative block w-full overflow-hidden rounded-xs border border-gold-antique/25 bg-[#18060E] text-ivory transition-all duration-300 hover:border-gold-antique/60 select-none",
-        className
-      )}
+      className={cn("group relative block min-w-0 min-h-[250px] overflow-hidden rounded-xl bg-burgundy shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-burgundy focus-visible:outline-offset-4", className)}
     >
-      {/* Background Media with Subtle Zoom Interaction */}
-      <div className="absolute inset-0 z-0 overflow-hidden flex items-center justify-center">
-        <Image
-          src={item.imageSrc}
-          alt={`${item.title} — illustrative decoration concept`}
-          width={item.width}
-          height={item.height}
-          sizes="(max-width: 1023px) 100vw, 60vw"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-        />
-
-        {/* Minimal Contrast Gradient (Preserves Photographic Vibrancy) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#100307]/90 via-[#100307]/20 to-transparent" />
-      </div>
-
-      {/* Card Content Overlay */}
-      <div className="relative z-10 flex h-full flex-col justify-between p-5 sm:p-6 lg:p-7">
-        {/* Top Tag & Indicator */}
-        <div className="flex items-center justify-between">
-          <span className="font-body text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-champagne bg-burgundy/75 backdrop-blur-sm border border-gold-antique/30 px-3 py-1 rounded-xs">
-            {item.category}
-          </span>
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gold-antique/40 text-gold-antique bg-burgundy/50 backdrop-blur-sm transition-transform duration-300 group-hover:translate-x-1 group-hover:text-ivory group-hover:border-gold-antique">
-            <ArrowRight className="w-3.5 h-3.5" />
-          </span>
-        </div>
-
-        {/* Bottom Title & Accent Note */}
-        <div>
-          <h3
-            className={cn(
-              "font-display font-semibold text-ivory tracking-tight transition-colors duration-200 group-hover:text-champagne mb-1.5",
-              isPrimary ? "text-2xl sm:text-3xl lg:text-4xl" : "text-lg sm:text-xl"
-            )}
-          >
-            {item.title}
-          </h3>
-          <p className="font-body text-xs sm:text-sm text-ivory/80 max-w-md line-clamp-2">
-            {item.accentNote}
-          </p>
-        </div>
+      <Image src={item.imageSrc} alt={`${item.title} - illustrative concept`} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 50vw" className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#18060e]/95 via-[#18060e]/25 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
+        <p className="mb-2 font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-champagne">{item.category}</p>
+        <h3 className="font-display text-xl sm:text-2xl font-semibold leading-tight text-white">{item.title}</h3>
+        <p className="mt-2 mb-0 max-w-md font-body text-xs leading-relaxed text-white/85">{item.accentNote}</p>
       </div>
     </Link>
   );
@@ -104,12 +35,6 @@ function ShowcaseCard({ item, className, isPrimary = false }: ShowcaseCardProps)
  * Asymmetrical editorial showcase integrating supplied concept photography.
  */
 export function SelectedCelebrations() {
-  const dominantItem = FEATURED_CELEBRATIONS[0]; // gallery-royal-mandap-wide.webp
-  const secondaryItem = FEATURED_CELEBRATIONS[1]; // gallery-reception-stage.webp
-  const tertiaryItem = FEATURED_CELEBRATIONS[2]; // gallery-temple-entrance.webp
-  const fourthItem = FEATURED_CELEBRATIONS[3]; // gallery-wedding-mandap.webp
-  const fifthItem = FEATURED_CELEBRATIONS[4]; // gallery-wedding-aisle.webp
-  const sixthItem = FEATURED_CELEBRATIONS[5]; // gallery-outdoor-floral-arch.webp
 
   return (
     <section
@@ -131,7 +56,7 @@ export function SelectedCelebrations() {
 
             {/* Main Section Heading */}
             <h2 className="font-display font-bold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.12]">
-              A Gallery of <br />
+              Ideas for <br />
               <span className="text-burgundy">Beautiful Celebrations</span>
             </h2>
           </div>
@@ -142,54 +67,26 @@ export function SelectedCelebrations() {
               Inspired by Tradition
             </span>
             <span className="font-body text-xs tracking-widest uppercase text-charcoal/60 mt-1 block">
-              Illustrative Decoration Concepts
+              Thoughtfully Created for You
             </span>
           </div>
         </div>
 
-        {/* Asymmetrical Editorial Gallery Grid */}
-        <div className="space-y-6 sm:space-y-8">
-          {/* Top Row: Dominant 7-Col Showcase + 5-Col Stacked Pair */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-            {/* Dominant Featured Showcase (1672px High Res) */}
-            <div className="lg:col-span-7">
-              <ShowcaseCard
-                item={dominantItem}
-                isPrimary
-                className="h-[clamp(18rem,90vw,24rem)] sm:h-[460px] lg:h-[530px]"
-              />
-            </div>
-
-            {/* Two Stacked Secondary Showcases */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-5 sm:gap-8 lg:flex lg:flex-col">
-              <ShowcaseCard
-                item={secondaryItem}
-                className="self-start"
-              />
-              <ShowcaseCard
-                item={tertiaryItem}
-                className="self-end"
-              />
-            </div>
-          </div>
-
-          {/* Bottom Row: 3-Column Editorial Array (Sized for smaller natural crops) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8 items-start">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[250px]">
+          {FEATURED_CELEBRATIONS.map((item, index) => (
             <ShowcaseCard
-              item={fourthItem}
+              key={item.id}
+              item={item}
+              className={cn(
+                index === 0 && "min-h-[360px] sm:col-span-2 lg:row-span-2",
+                index === 1 && "sm:col-span-2",
+                index >= 4 && "lg:col-span-2"
+              )}
             />
-            <ShowcaseCard
-              item={fifthItem}
-              className="justify-self-end md:justify-self-center"
-            />
-            <ShowcaseCard
-              item={sixthItem}
-              className="col-span-2 justify-self-center md:col-span-1 md:justify-self-end"
-            />
-          </div>
+          ))}
         </div>
 
-        <p className="mt-6 text-center font-body text-xs text-charcoal/65">Images are illustrative decoration concepts, not verified photographs of client events.</p>
+        <p className="mt-6 text-center font-body text-xs text-charcoal/65">Images are illustrative decoration concepts.</p>
 
         {/* Bottom Section Pathway CTA */}
         <div className="mt-12 sm:mt-16 text-center">
@@ -197,7 +94,7 @@ export function SelectedCelebrations() {
             href="/our-work"
             className="group inline-flex items-center justify-center gap-2 font-body font-medium text-xs tracking-[0.18em] uppercase px-8 py-4 bg-burgundy text-ivory hover:bg-burgundy-hover rounded-xs shadow-sm transition-all duration-200 select-none min-h-[46px]"
           >
-            <span>Explore Inspiration Gallery</span>
+            <span>Explore Our Work</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>

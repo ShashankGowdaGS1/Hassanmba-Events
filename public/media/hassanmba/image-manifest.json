@@ -174,5 +174,13 @@
     "use": "Large wedding portfolio photo",
     "source": "standalone generated image",
     "size_kb": 567
+  },
+  {
+    "file": "hero-mobile-complete.webp",
+    "width": 1024,
+    "height": 1536,
+    "use": "Homepage mobile hero",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 444
   }
 ]

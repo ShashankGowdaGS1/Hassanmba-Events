@@ -62,21 +62,15 @@ export function OurProcess() {
         </div>
 
         {/* DESKTOP TIMELINE (Visible on lg: 1024px+) */}
-        <div className="hidden lg:grid grid-cols-3 gap-12 relative">
-          {/* Subtle Horizontal Connecting Gold Line */}
-          <div
-            className="absolute top-10 left-12 right-12 h-px bg-gradient-to-r from-transparent via-gold-antique/50 to-transparent z-0"
-            aria-hidden="true"
-          />
-
+        <div className="hidden lg:grid grid-cols-3 gap-12">
           {STEPS.map((step) => (
-            <div key={step.number} className="relative z-10 flex flex-col text-left">
-              {/* Step Numeral & Marker */}
-              <div className="flex items-baseline justify-between mb-6 pb-2">
-                <span className="font-display text-6xl font-bold text-gold-antique/70">
-                  {step.number}
-                </span>
-                <span className="w-2.5 h-2.5 rotate-45 border border-gold-antique bg-ivory" />
+            <div key={step.number} className="flex flex-col text-left">
+              <span className="font-display text-6xl font-bold leading-none text-gold-antique/70 mb-5">
+                {step.number}
+              </span>
+              <div className="flex items-center gap-3 mb-6" aria-hidden="true">
+                <span className="w-2.5 h-2.5 shrink-0 rotate-45 border border-gold-antique bg-ivory" />
+                <span className="h-px flex-1 bg-gradient-to-r from-gold-antique/50 to-gold-antique/10" />
               </div>
 
               {/* Accent Note */}

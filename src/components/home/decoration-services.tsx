@@ -112,36 +112,16 @@ export function DecorationServices() {
 
           {/* Right Column: Sticky Photographic Display Showcase */}
           <div className="col-span-5 sticky top-32">
-            <div className="relative w-full rounded-xs border border-gold-antique/30 shadow-royal bg-[#1D0811] text-ivory p-6 sm:p-7 flex flex-col justify-between">
-              {/* Contained Photographic Display Area (Prevents Low-Res Upscaling) */}
-              <div className="relative w-full h-[270px] rounded-xs overflow-hidden border border-gold-antique/30 bg-[#12030A]">
-                {CORE_SERVICE_CATEGORIES.map((service, index) => {
-                  const isCurrent = index === activeIndex;
-
-                  return (
-                    <div
-                      key={service.id}
-                      aria-hidden={!isCurrent}
-                      className={cn(
-                        "absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-out",
-                        isCurrent ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-                      )}
-                    >
-                      <Image
-                        src={service.imageSrc}
-                        alt={service.imageAlt}
-                        width={service.width}
-                        height={service.height}
-                        sizes={`${Math.min(service.width, 480)}px`}
-                        className="w-auto h-auto max-w-full max-h-full object-contain"
-                      />
-                    </div>
-                  );
-                })}
+            <div className="w-full bg-[#1D0811] text-ivory shadow-royal">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-burgundy">
+                {CORE_SERVICE_CATEGORIES.map((service, index) => (
+                  <div key={service.id} aria-hidden={index !== activeIndex} className={cn("absolute inset-0 transition-opacity duration-300 motion-reduce:transition-none", index === activeIndex ? "opacity-100" : "opacity-0")}>
+                    <Image src={service.imageSrc} alt={index === activeIndex ? service.imageAlt : ""} fill sizes="(min-width: 1024px) 38vw, 100vw" className={cn("object-cover", service.id === "flower-decorations" || service.id === "naming-ceremonies" ? "object-center" : "object-[center_45%]")} />
+                  </div>
+                ))}
               </div>
-
               {/* Service Metadata Card Content */}
-              <div className="pt-6 space-y-3 text-left">
+              <div className="p-6 space-y-3 text-left">
                 <div className="flex items-center justify-between">
                   <span className="font-body text-[10px] uppercase tracking-[0.22em] text-champagne bg-burgundy/80 backdrop-blur-sm border border-gold-antique/30 px-3 py-1 rounded-xs font-semibold">
                     {activeService.accentPhrase}
@@ -162,7 +142,7 @@ export function DecorationServices() {
                 <div className="pt-2">
                   <Link
                     href={`/services#${activeService.id}`}
-                    className="inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.18em] text-champagne hover:text-white transition-colors"
+                    className="inline-flex min-h-[44px] items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.18em] text-champagne underline decoration-gold-antique underline-offset-4 hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-champagne"
                   >
                     <span>Explore Service Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -182,20 +162,9 @@ export function DecorationServices() {
               <Link
                 key={service.id}
                 href={`/services#${service.id}`}
-                className="group grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-[minmax(0,14rem)_minmax(0,1fr)] gap-x-4 sm:gap-x-6 items-start sm:items-center py-5 border-b border-gold-antique/25 hover:border-gold-antique/60 transition-colors text-left"
+                className="group block py-5 border-b border-gold-antique/25 hover:border-gold-antique/60 transition-colors text-left"
               >
-                {/* Contained Service Photo Frame */}
-                <div className="relative w-full h-32 sm:h-52 rounded-xs overflow-hidden row-span-4 border border-gold-antique/25 bg-[#18050E] flex items-center justify-center">
-                  <Image
-                    src={service.imageSrc}
-                    alt={service.imageAlt}
-                    width={service.width}
-                    height={service.height}
-                    sizes="(max-width: 639px) 96px, 224px"
-                    className="w-auto h-auto max-w-full max-h-full object-contain group-hover:scale-[1.02] transition-transform duration-500"
-                  />
-                </div>
-
+                <Image src={service.imageSrc} alt={service.imageAlt} width={service.width} height={service.height} sizes="(max-width: 640px) 100vw, 80vw" className="aspect-[16/7] max-h-64 w-full object-cover mb-4" />
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="font-display text-sm font-semibold text-gold-dark">
                     {formattedNumber}

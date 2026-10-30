@@ -26,9 +26,9 @@ export interface HeroProps {
  * - Coordinated entrance animations with reduced-motion support
  */
 export function Hero({
-  imageDesktop = "/media/hassanmba/hero-desktop.webp",
-  imageMobile = "/media/hassanmba/hero-mobile.webp",
-  imageAlt = "Illustrative concept of a grand wedding floral stage",
+  imageDesktop = "/images/hero-desktop.webp",
+  imageMobile = "/images/hero-mobile.webp",
+  imageAlt = "Illustrative wedding floral stage",
   className,
 }: HeroProps) {
   // Use centralized business naming data for the eyebrow
@@ -48,7 +48,7 @@ export function Hero({
       className={cn(
         "relative w-full min-h-[100svh] min-h-[100dvh] flex flex-col justify-between overflow-hidden select-none",
         /* Negate header height so hero background extends behind transparent navbar */
-        "-mt-[68px] sm:-mt-[76px] lg:-mt-24 pt-[110px] sm:pt-[124px] lg:pt-[150px] xl:pt-[164px] pb-16 sm:pb-20 lg:pb-24",
+        "-mt-[68px] sm:-mt-[76px] lg:-mt-24 pt-[100px] sm:pt-[112px] lg:pt-[120px] pb-8 sm:pb-10 lg:pb-8",
         className
       )}
       aria-label={`Welcome to ${BUSINESS_DATA.brand.name}`}
@@ -56,32 +56,11 @@ export function Hero({
       {/* ===================================================================
           1. BACKGROUND LAYER: RESPONSIVE PHOTOGRAPH WITH ART DIRECTION
           =================================================================== */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Responsive Art Direction with <picture> (Only downloads matching asset) */}
-        <picture className="w-full h-full block">
-          <source
-            media="(max-width: 767px)"
-            srcSet={imageMobile}
-            type="image/webp"
-            width={528}
-            height={940}
-          />
-          <source
-            media="(min-width: 768px)"
-            srcSet={imageDesktop}
-            type="image/webp"
-            width={1672}
-            height={940}
-          />
-          <img
-            src={imageDesktop}
-            alt={imageAlt}
-            fetchPriority="high"
-            decoding="async"
-            className="w-full h-full object-cover object-center md:object-right animate-hero-bg select-none"
-          />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#18060E]">
+        <picture className="block h-full w-full">
+          <source media="(max-width: 767px)" srcSet={imageMobile} />
+          <img src={imageDesktop} alt={imageAlt} fetchPriority="high" className="h-full w-full object-cover object-center" />
         </picture>
-
         {/* Directional Cinematic Overlays (Darker on Left Text Area, Softer on Right Mandap) */}
         <div
           className="absolute inset-0"
@@ -107,7 +86,7 @@ export function Hero({
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 my-auto">
         <div className="max-w-xl md:max-w-2xl lg:max-w-[700px] xl:max-w-[740px] text-left">
           {/* Eyebrow Label with fine gold rule */}
-          <div className="animate-hero-eyebrow flex items-center gap-3 mb-4 sm:mb-6">
+          <div className="animate-hero-eyebrow flex items-center gap-3 mb-3 sm:mb-4">
             <span className="w-8 sm:w-12 h-px bg-gold-antique/80" aria-hidden="true" />
             <span className="font-body font-medium text-[11px] sm:text-xs tracking-[0.24em] uppercase text-champagne drop-shadow-sm">
               {eyebrowLocation}
@@ -115,20 +94,20 @@ export function Hero({
           </div>
 
           {/* Primary Editorial Headline (H1 — Bodoni Moda) */}
-          <h1 className="animate-hero-headline font-display font-bold text-ivory tracking-tight text-[clamp(2rem,9.5vw,2.875rem)] sm:text-[62px] md:text-[74px] lg:text-[84px] xl:text-[96px] leading-[1.06] mb-3 sm:mb-4 drop-shadow-sm">
+          <h1 className="animate-hero-headline font-display font-bold text-ivory tracking-tight text-[clamp(2rem,9.5vw,2.875rem)] sm:text-[56px] md:text-[64px] lg:text-[clamp(68px,6vw,88px)] leading-[1.06] mb-3 drop-shadow-sm">
             <span className="block">Celebrations,</span>
             <span className="block text-champagne/95">Beautifully Adorned.</span>
           </h1>
 
           {/* Locked Accent Font Treatment (Pinyon Script) */}
-          <div className="animate-hero-accent mb-6 sm:mb-8">
-            <span className="font-accent text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-gold-light/95 leading-none block drop-shadow-sm">
+          <div className="animate-hero-accent mb-4 sm:mb-5">
+            <span className="font-accent text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-gold-light/95 leading-none block drop-shadow-sm">
               With Love & Tradition
             </span>
           </div>
 
           {/* Supporting Description (Jost) */}
-          <p className="animate-hero-desc font-body text-sm sm:text-base md:text-lg text-ivory/90 font-normal leading-relaxed max-w-lg mb-8 sm:mb-10 drop-shadow-sm">
+          <p className="animate-hero-desc font-body text-sm sm:text-base md:text-lg text-ivory/90 font-normal leading-relaxed max-w-lg mb-6 sm:mb-7 drop-shadow-sm">
             Thoughtfully crafted floral decorations for weddings, traditional ceremonies, and life&apos;s most meaningful occasions.
           </p>
 
@@ -157,12 +136,12 @@ export function Hero({
         </div>
       </div>
 
-      <p className="relative z-10 mb-0 mt-6 px-4 text-center font-body text-xs text-champagne/80">Illustrative decoration concept</p>
+      <p className="relative z-10 mt-5 mb-0 text-center font-body text-xs text-champagne/80">Illustrative decoration concept</p>
 
       {/* ===================================================================
           3. RESTRAINED SCROLL CUE
           =================================================================== */}
-      <div className="relative z-10 w-full flex justify-center pt-8">
+      <div className="relative z-10 w-full flex justify-center pt-3">
         <a
           href="#selected-celebrations"
           onClick={handleScrollCueClick}

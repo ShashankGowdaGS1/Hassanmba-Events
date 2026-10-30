@@ -18,18 +18,18 @@ const FAQS: FAQItem[] = [
     id: "faq-types-of-events",
     question: "What types of events do you decorate?",
     answer:
-      "We specialize in a comprehensive range of traditional celebrations and modern events across Hassan, including Wedding Mandaps & Muhurthams, Evening Receptions, Temple Opening Events & Festivals, Baby Showers (Seemantha), Naming Ceremonies (Namakarana), Housewarming Gatherings (Gruhapravesha), and Corporate Assemblies.",
+      "We decorate weddings, temple events, baby showers, naming ceremonies, housewarmings and corporate events.",
   },
   {
     id: "faq-discuss-ideas",
     question: "Can I discuss custom decoration ideas for my event?",
     answer:
-      "Yes, every celebration is unique. You can discuss your preferred floral varieties, color themes, stage backdrops, and venue layouts directly with our team. We assist in aligning the floral craftsmanship with your family's ceremonial traditions and personal aesthetic preferences.",
+      "Yes. Share your ideas for flowers, colours, backdrops and the traditions you want to honour.",
   },
   {
     id: "faq-enquire-date",
     question: "How can I enquire about date availability for my celebration?",
-    answer: `You can reach out directly via telephone at ${BUSINESS_DATA.contact.phonePrimaryDisplay} or send us a message through our dedicated WhatsApp enquiry channel. Sharing your event date, venue location, and approximate decoration scope helps us understand your requirements.`,
+    answer: `Call ${BUSINESS_DATA.contact.phonePrimaryDisplay} or send us a WhatsApp message with your event date, venue and decoration needs.`,
   },
   {
     id: "faq-location",
@@ -67,8 +67,7 @@ export function FAQ() {
             </div>
 
             <h2 className="font-display font-bold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.14]">
-              Questions Before Your <br />
-              <span className="text-burgundy">Celebration?</span>
+              A Few Things <span className="text-burgundy">to Know</span>
             </h2>
 
             <p className="font-body text-xs sm:text-sm text-charcoal/75 leading-relaxed pt-2 max-w-md">

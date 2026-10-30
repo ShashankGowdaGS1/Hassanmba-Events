@@ -48,7 +48,7 @@ export default function AboutPage() {
           }}
         />
         <Container size="wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left — editorial text block */}
             <div>
               <p className="font-accent text-2xl md:text-3xl text-gold-antique mb-3 leading-tight">
@@ -76,27 +76,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right — photography */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-sm lg:max-w-md">
-                {/* Thin gold border offset */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -top-3 -right-3 w-full h-full border border-gold-antique/40"
-                />
-                <Image
-                  src="/media/hassanmba/gallery-wedding-mandap.webp"
-                  alt="Royal Wedding Mandap Floral Architecture — Decoration Inspiration"
-                  width={1536}
-                  height={1024}
-                  className="w-full h-auto relative z-10 object-cover"
-                  priority
-                />
-                <p className="text-xs font-body text-charcoal/70 italic mt-2 text-right pr-1">
-                  Decoration Inspiration — Illustrative Concept
-                </p>
-              </div>
-            </div>
+            <figure>
+              <Image src="/images/gallery-wedding-mandap.webp" alt="Illustrative wedding mandap floral decoration" width={1536} height={1024} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full h-auto" />
+              <figcaption className="mt-2 text-xs text-charcoal/70">Illustrative decoration concept</figcaption>
+            </figure>
           </div>
         </Container>
       </section>
@@ -142,27 +125,7 @@ export default function AboutPage() {
       {/* ─── TRADITION & CRAFT ────────────────────────────── */}
       <section className="bg-burgundy py-20 md:py-28 overflow-hidden">
         <Container size="wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Image in arch-style frame */}
-            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-              <div className="relative w-full max-w-xs">
-                <div
-                  aria-hidden="true"
-                  className="absolute -top-3 -left-3 w-full h-full border border-gold-antique/30"
-                />
-                <Image
-                  src="/media/hassanmba/heritage-floral-swing.webp"
-                  alt="Traditional Floral Heritage Swing — Decoration Inspiration"
-                  width={1370}
-                  height={1148}
-                  className="w-full h-auto relative z-10 object-cover"
-                />
-                <p className="text-xs font-body text-champagne/80 italic mt-2 text-right pr-1">
-                  Decoration Inspiration — Illustrative Concept
-                </p>
-              </div>
-            </div>
-
+          <div className="max-w-3xl mx-auto">
             {/* Text */}
             <div className="order-1 lg:order-2">
               <p className="font-accent text-xl md:text-2xl text-gold-antique mb-3">
@@ -214,18 +177,7 @@ export default function AboutPage() {
             <DecorativeDivider />
           </div>
 
-          <div className="grid gap-10 md:grid-cols-[minmax(0,296px)_minmax(0,1fr)] lg:gap-20 items-start max-w-5xl mx-auto">
-            <figure className="w-full max-w-[296px] mx-auto md:mx-0">
-              <Image
-                src="/media/hassanmba/gallery-temple-entrance.webp"
-                alt="Illustrative temple entrance with flower garlands"
-                width={1254}
-                height={1254}
-                sizes="(max-width: 360px) 80vw, 296px"
-                className="w-full h-auto"
-              />
-              <figcaption className="mt-2 text-xs text-charcoal/70">Illustrative decoration concept</figcaption>
-            </figure>
+          <div className="max-w-3xl mx-auto">
             <div>
               <p className="font-body text-sm text-charcoal/75 leading-relaxed mb-6">
                 From wedding ceremonies to family milestones and professional gatherings,

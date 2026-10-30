@@ -1,0 +1,12 @@
+﻿.galleryEntrance {
+  animation: galleryFade 260ms ease-out both;
+}
+
+@keyframes galleryFade {
+  from { opacity: 0.6; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galleryEntrance { animation: none; }
+}

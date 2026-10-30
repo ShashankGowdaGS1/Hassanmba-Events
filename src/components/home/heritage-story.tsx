@@ -27,9 +27,9 @@ export function HeritageStory() {
       />
 
       <Container size="default" className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* LEFT COLUMN: Editorial Brand Narrative */}
-          <div className="lg:col-span-7 text-left space-y-6">
+          <div className="text-left space-y-6">
             {/* Eyebrow */}
             <div className="flex items-center gap-3">
               <span className="w-8 h-px bg-gold-antique" aria-hidden="true" />
@@ -47,24 +47,16 @@ export function HeritageStory() {
             {/* Pinyon Script Accent Phrase */}
             <div className="pt-1">
               <span className="font-accent text-3xl sm:text-4xl text-gold-light/95 block leading-none">
-                Rooted in Tradition
+                The Art of Adornment
               </span>
             </div>
 
-            {/* Narrative Body (Factual, No Fabricated Claims) */}
             <div className="space-y-4 font-body text-sm sm:text-base text-ivory/85 leading-relaxed pt-2">
               <p>
-                Based in the heritage city of Hassan, Karnataka,{" "}
-                <strong className="text-champagne font-semibold">
-                  {BUSINESS_DATA.brand.name}
-                </strong>{" "}
-                offers floral decoration inspired by South Indian traditions. Find us at {BUSINESS_DATA.address.street}, {BUSINESS_DATA.address.landmark}, {BUSINESS_DATA.address.city}.
+                {BUSINESS_DATA.brand.name} is a Hassan-based floral decoration service inspired by traditional South Indian celebrations.
               </p>
               <p>
-                In Indian weddings and ceremonies, flowers are not merely ornaments—they are sacred symbols of blessing, joy, and new beginnings. From fragrant jasmine garlands and vibrant marigold toranas to sculpted mandap backdrops and contemporary reception stages, each creation is tailored to honor cultural customs while delivering regal elegance.
-              </p>
-              <p className="text-xs sm:text-sm text-ivory/70 italic border-l-2 border-gold-antique/50 pl-4 py-1">
-                Share the traditions and details that matter to you, and explore floral ideas for your family&apos;s celebration.
+                Floral arrangements, garlands and decorative details help create an atmosphere that feels meaningful to each occasion.
               </p>
             </div>
 
@@ -79,62 +71,10 @@ export function HeritageStory() {
               </Link>
             </div>
           </div>
-
-          {/* RIGHT COLUMN: Ceremonial Arch Showcase Integrating Swing Photography */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md rounded-t-[140px] rounded-b-xs border-2 border-gold-antique/40 overflow-hidden shadow-2xl bg-[#2D0613] p-6 sm:p-8 flex flex-col justify-between items-center text-center">
-              {/* Decorative Arch Background */}
-              <div className="absolute inset-0 z-0">
-                <div
-                  className="w-full h-full"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(ellipse at 50% 25%, rgba(193, 138, 55, 0.28) 0%, rgba(68, 9, 27, 0.95) 75%)",
-                  }}
-                />
-                {/* Traditional Inner Arch Contour */}
-                <div className="absolute inset-3.5 rounded-t-[125px] border border-gold-antique/25 pointer-events-none" />
-              </div>
-
-              {/* Central Royal Emblem Medallion */}
-              <div className="relative z-10 pt-4 mb-4">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full overflow-hidden border-2 border-gold-antique/60 shadow-royal">
-                  <Image
-                    src={BUSINESS_DATA.brand.logo.src}
-                    alt={BUSINESS_DATA.brand.logo.alt}
-                    fill
-                    sizes="96px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Integrated Heritage Floral Swing Photography (Contained to preserve native resolution) */}
-              <div className="relative z-10 w-full max-w-[320px] rounded-xs overflow-hidden border border-gold-antique/40 bg-[#18040C]">
-                <Image
-                  src="/media/hassanmba/heritage-floral-swing.webp"
-                  alt="Illustrative ceremonial floral swing concept"
-                  width={1370}
-                  height={1148}
-                  sizes="(max-width: 640px) 280px, 320px"
-                  className="block h-auto w-full"
-                />
-              </div>
-
-              {/* Arch Caption */}
-              <div className="relative z-10 space-y-1 pt-4 pb-2">
-                <span className="font-accent text-2xl text-gold-light block">
-                  Artisanal Floral Craftsmanship
-                </span>
-                <p className="font-display text-base text-ivory tracking-wide font-medium">
-                  {BUSINESS_DATA.brand.descriptor}
-                </p>
-                <p className="font-body text-[11px] text-champagne/80 tracking-widest uppercase">
-                  {BUSINESS_DATA.brand.locationLabel}
-                </p>
-              </div>
-            </div>
-          </div>
+          <figure className="max-w-md mx-auto lg:ml-auto">
+            <Image src="/images/heritage-floral-swing.webp" alt="Illustrative traditional floral swing" width={1370} height={1148} sizes="(min-width: 1024px) 40vw, 90vw" className="w-full rounded-t-[140px] border-[0.5mm] border-b-0 border-gold-antique/[0.55]" />
+            <figcaption className="mt-2 text-xs text-champagne/70">Illustrative decoration concept</figcaption>
+          </figure>
         </div>
       </Container>
     </section>

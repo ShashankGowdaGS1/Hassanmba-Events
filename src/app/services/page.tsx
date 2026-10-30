@@ -22,15 +22,8 @@ export default function ServicesPage() {
       {/* ─── SERVICES HERO ────────────────────────────────── */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end overflow-hidden">
         {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/media/hassanmba/gallery-royal-mandap-wide.webp"
-            alt="Royal Mandap Floral Installation — Decoration Inspiration"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
+        <div className="absolute inset-0 z-0 bg-[#18060E]">
+          <Image src="/images/gallery-royal-mandap-wide.webp" alt="" fill sizes="100vw" priority className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
         </div>
 
@@ -48,9 +41,6 @@ export default function ServicesPage() {
             </p>
           </Container>
         </div>
-        <p className="absolute bottom-3 right-4 z-10 text-xs font-body text-champagne/80 italic">
-          Decoration Inspiration — Illustrative Concept
-        </p>
       </section>
 
       {/* ─── SERVICE NAV INDEX ────────────────────────────── */}
@@ -80,7 +70,6 @@ export default function ServicesPage() {
       {CORE_SERVICE_CATEGORIES.map((service, index) => {
         const detail = SERVICE_DETAILS[service.id];
         const isEven = index % 2 === 0;
-        const isLargeImage = service.width >= 400;
 
         return (
           <section
@@ -92,41 +81,12 @@ export default function ServicesPage() {
           >
             <Container size="wide">
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start`}
+                className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
               >
-                {/* Image column */}
-                <div
-                  className={`flex min-w-0 ${isEven ? "justify-center lg:justify-start" : "justify-center lg:justify-end lg:order-2"}`}
-                >
-                  <div className="relative max-w-full">
-                    {/* Accent border */}
-                    <div
-                      aria-hidden="true"
-                      className={`absolute ${isEven ? "-top-2 -right-2" : "-top-2 -left-2"} w-full h-full border border-gold-antique/30`}
-                    />
-                    <Image
-                      src={service.imageSrc}
-                      alt={service.imageAlt}
-                      width={isLargeImage ? Math.min(service.width, 480) : service.width}
-                      height={
-                        isLargeImage
-                          ? Math.round(
-                              (Math.min(service.width, 480) / service.width) *
-                                service.height
-                            )
-                          : service.height
-                      }
-                      className="relative z-10 object-contain max-w-full h-auto"
-                      style={{
-                        maxWidth: isLargeImage ? "100%" : `${service.width}px`,
-                      }}
-                    />
-                    <p className="text-xs font-body text-charcoal/70 italic mt-2 text-right pr-1">
-                      Decoration Inspiration — Illustrative Concept
-                    </p>
-                  </div>
-                </div>
-
+                <figure className={isEven ? "" : "lg:order-2"}>
+                  <Image src={service.imageSrc} alt={service.imageAlt} width={service.width} height={service.height} sizes="(min-width: 1024px) 45vw, 100vw" className="w-full aspect-[4/3] object-cover" />
+                  <figcaption className="mt-2 text-xs text-charcoal/70">Illustrative decoration concept</figcaption>
+                </figure>
                 {/* Text column */}
                 <div>
                   <span className="font-body text-xs font-medium tracking-widest uppercase text-gold-dark/50 mb-2 block">

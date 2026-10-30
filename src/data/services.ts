@@ -20,7 +20,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Sacred Muhurtham",
     shortDescription:
       "Grand traditional floral mandaps, auspicious flower arrangements, and ceremonial stage backdrops.",
-    imageSrc: "/media/hassanmba/gallery-royal-mandap-wide.webp",
+    imageSrc: "/images/gallery-royal-mandap-wide.webp",
     imageAlt: "Royal Wedding Mandap Floral Architecture Concept",
     width: 1672,
     height: 941,
@@ -31,7 +31,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Artisanal Flora",
     shortDescription:
       "Bespoke fresh floral backdrops, temple garland artistry, and signature ceremonial floral arches.",
-    imageSrc: "/media/hassanmba/service-flower-arrangement.webp",
+    imageSrc: "/images/service-flower-arrangement.webp",
     imageAlt: "Artisanal Fresh Flower Arrangement Concept",
     width: 1024,
     height: 1536,
@@ -42,7 +42,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Devotional Splendor",
     shortDescription:
       "Sacred temple sanctum adornments, festive floral pillars, and ceremonial pravesha decoration.",
-    imageSrc: "/media/hassanmba/service-temple-flower-garlands.webp",
+    imageSrc: "/images/service-temple-flower-garlands.webp",
     imageAlt: "Sacred Temple Flower Garlands & Adornment Concept",
     width: 1536,
     height: 1024,
@@ -53,7 +53,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Joyful Beginnings",
     shortDescription:
       "Traditional Seemantha setups, blossom swings, and pastel floral backgrounds for cherished blessings.",
-    imageSrc: "/media/hassanmba/service-baby-shower.webp",
+    imageSrc: "/images/service-baby-shower.webp",
     imageAlt: "Traditional Baby Shower Floral Swing & Backdrop Concept",
     width: 1536,
     height: 1024,
@@ -64,7 +64,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Sacred Namakarana",
     shortDescription:
       "Auspicious floral cradle styling, cradle backdrops, and fragrant jasmine arrangements.",
-    imageSrc: "/media/hassanmba/service-naming-ceremony.webp",
+    imageSrc: "/images/service-naming-ceremony.webp",
     imageAlt: "Auspicious Naming Ceremony Floral Cradle Concept",
     width: 1024,
     height: 1536,
@@ -75,7 +75,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Gruhapravesha Grace",
     shortDescription:
       "Grand main entrance toranas, traditional marigold hangings, and pooja room floral sanctums.",
-    imageSrc: "/media/hassanmba/service-housewarming-entrance.webp",
+    imageSrc: "/images/service-housewarming-entrance.webp",
     imageAlt: "Traditional Gruhapravesha Entrance Floral Torana Concept",
     width: 1536,
     height: 1024,
@@ -86,7 +86,7 @@ export const CORE_SERVICE_CATEGORIES: ServiceCategory[] = [
     accentPhrase: "Refined Assemblies",
     shortDescription:
       "Sophisticated stage installations, inauguration backdrops, and formal celebratory assemblies.",
-    imageSrc: "/media/hassanmba/service-corporate-event.webp",
+    imageSrc: "/images/service-corporate-event.webp",
     imageAlt: "Sophisticated Corporate Event Stage & Banquet Floral Concept",
     width: 1536,
     height: 1024,
