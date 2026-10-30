@@ -1,27 +1,28 @@
-# Hassanmba Events: deployment checklist
+﻿# Hassanmba Events: Vercel deployment checklist
 
-This project has not been deployed. Preview and production deployments both require explicit authorization.
+## Project settings
 
-## Before public launch
+- Import `ShashankGowdaGS1/Hassanmba-Events` into Vercel and use the repository root as the root directory.
+- Use the Next.js framework preset and default build and output settings. The project has a committed `package-lock.json` and builds with `npm run build`; no `vercel.json` is required.
+- The project specifies Node.js 24.x in `package.json`, matching the major version used for local verification. Vercel uses this engine setting for the build and runtime.
+- The enquiry form opens a prepared WhatsApp message; it does not require a server-side email service or database.
 
-- [ ] Confirm the production domain and configure `NEXT_PUBLIC_SITE_URL` in Vercel's Production environment as its complete HTTPS origin, with no path, query, fragment, or credentials. For example: `https://your-confirmed-domain.example` (format only). Never put secrets in a `NEXT_PUBLIC_` variable.
-- [ ] Rebuild after setting or changing the variable. Verify the live canonical URLs, Open Graph image and URL, `/sitemap.xml`, and `/robots.txt`. With the variable unset or invalid, the site deliberately omits canonicals and sitemap entries.
-- [ ] Confirm the business spelling, both phone numbers, WhatsApp, Instagram, full address and service descriptions. The current logo spelling is pending confirmation; do not alter the artwork without approval.
-- [ ] Have the client approve the Privacy Policy and Terms & Conditions, including actual contact-data handling and any relevant hosting practices. Both pages remain clearly marked as drafts.
-- [ ] Approve the illustrative AI-generated images or replace them with authorized, verified event photography. Small concept crops should not be enlarged into large desktop images. Confirm rights to all imagery and logo artwork.
-- [ ] Manually review desktop, tablet, phone and short-screen layouts; test navigation, service anchors, gallery/lightbox, form validation, WhatsApp handoff, phone links and maps. No visual viewport review was performed in this preparation.
+## Domain and environment
 
-## Vercel setup, after authorization
+- Set `NEXT_PUBLIC_SITE_URL` in Vercel's Production environment to the confirmed public HTTPS origin, without a path or trailing query, for example `https://your-domain.example`. This is public configuration, not a secret.
+- Redeploy after changing the variable. Without a valid value, the site deliberately omits canonical URLs, social image URLs and sitemap entries. Set a Preview-specific origin only when it is known and appropriate.
+- Check the production canonical URL, social sharing metadata, `/sitemap.xml`, and `/robots.txt` after deployment.
 
-- [ ] Keep `package-lock.json`, use the Next.js framework preset and the project root. The existing `npm run build` uses `next build`; no custom `vercel.json` or output override is needed by this project. The local build was verified with Node.js 24.14.0; select Node.js 24.x in Vercel for a comparable environment.
-- [ ] Arrange a protected Preview deployment first. An unset Preview `NEXT_PUBLIC_SITE_URL` omits canonical metadata; use a confirmed Preview HTTPS origin only if preview-specific canonical and sitemap output is required. Preview access protection should be configured where available. Do not assume Preview is private or excluded from search without verifying project settings.
-- [ ] Confirm the Vercel project and deployment workflow before importing a repository: importing or pushing to a connected production branch can initiate a deployment. Do not deploy, connect a production domain, or promote a preview until explicitly approved.
-- [ ] Run a fresh Vercel build and check build logs, installed dependencies and image optimization. Verify all routes and perform a manual review of the protected Preview before requesting production approval.
+## Before publishing
 
-## Source control and maintenance
+- Review the Privacy Policy and Terms & Conditions; both are currently marked as drafts.
+- Confirm the business name, phone numbers, WhatsApp, Instagram, address, and service descriptions.
+- Approve the illustrative AI-generated images and logo or replace them with authorized assets.
+- Review the site on desktop, tablet, mobile and short screens. Test the navigation, service links, image gallery, contact form, WhatsApp handoff, telephone links and maps.
+- Verify deployment protection for previews if required. A Git push can automatically create a Preview or Production deployment when the repository is connected to Vercel; confirm the configured production branch in Vercel.
 
-- [ ] There is currently no Git repository. If authorized later, initialize one locally, inspect the untracked and ignored files, stage only intended source files and approved media, and review the staged diff before committing. Do not include secrets, `.env` files, `node_modules`, or `.next`; `.env.example` is intentionally allowed.
-- [ ] Business details live in `src/data/business.ts`; service labels, enquiry options and short descriptions in `src/data/services.ts`; detailed service descriptions in `src/data/service-details.ts`. Keep related display, phone-link and address fields consistent when updating them.
-- [ ] Re-run `npm run type-check`, `npm run lint`, and `npm run build` after changes. A production build currently succeeds with the existing lockfile. No automated test script is configured.
+## Local verification
 
-References: [Next.js on Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs), [Vercel environment variables](https://vercel.com/docs/environment-variables), [Vercel deployment environments](https://vercel.com/docs/deployments/environments), and [Node.js version settings](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions).
+Run `npm run type-check`, `npm run lint`, and `npm run build`. Keep `.env` files, credentials, `node_modules`, and `.next` out of source control; `.env.example` documents the public configuration.
+
+References: [Next.js on Vercel](https://vercel.com/docs/frameworks/full-stack/nextjs), [Node.js versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions), [environment variables](https://vercel.com/docs/environment-variables), and [Git deployments](https://vercel.com/docs/git).

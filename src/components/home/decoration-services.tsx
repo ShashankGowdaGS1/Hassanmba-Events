@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { CORE_SERVICE_CATEGORIES } from "@/data/services";
 import { cn } from "@/lib/utils";
+import { MobileFloralChapters } from "./mobile-floral-chapters";
 
 /**
  * Section 03: Our Decoration Services.
@@ -153,8 +154,10 @@ export function DecorationServices() {
           </div>
         </div>
 
-        {/* MOBILE DEDICATED VERTICAL CARDS (Visible on < lg: 1024px) */}
-        <div className="lg:hidden flex flex-col space-y-5">
+        <MobileFloralChapters />
+
+        {/* Existing tablet service cards */}
+        <div className="hidden md:flex lg:hidden flex-col space-y-5">
           {CORE_SERVICE_CATEGORIES.map((service, index) => {
             const formattedNumber = String(index + 1).padStart(2, "0");
 
