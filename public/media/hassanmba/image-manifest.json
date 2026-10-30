@@ -1,0 +1,178 @@
+[
+  {
+    "file": "hero-desktop.webp",
+    "width": 1672,
+    "height": 940,
+    "use": "Homepage full-width hero",
+    "source": "standalone generated image",
+    "size_kb": 530
+  },
+  {
+    "file": "hero-mobile.webp",
+    "width": 528,
+    "height": 940,
+    "use": "Homepage portrait hero crop",
+    "source": "crop of standalone generated image",
+    "size_kb": 201
+  },
+  {
+    "file": "gallery-wedding-mandap.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 360
+  },
+  {
+    "file": "gallery-temple-entrance.webp",
+    "width": 1254,
+    "height": 1254,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 374
+  },
+  {
+    "file": "gallery-reception-stage.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 242
+  },
+  {
+    "file": "service-flower-closeup.webp",
+    "width": 1024,
+    "height": 1536,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 118
+  },
+  {
+    "file": "service-housewarming-entrance.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 313
+  },
+  {
+    "file": "service-flower-arrangement.webp",
+    "width": 1024,
+    "height": 1536,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 201
+  },
+  {
+    "file": "gallery-wedding-aisle.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 252
+  },
+  {
+    "file": "service-temple-flower-garlands.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 279
+  },
+  {
+    "file": "gallery-grand-entry.webp",
+    "width": 1024,
+    "height": 1536,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 328
+  },
+  {
+    "file": "service-baby-shower.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 312
+  },
+  {
+    "file": "service-naming-ceremony.webp",
+    "width": 1024,
+    "height": 1536,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 318
+  },
+  {
+    "file": "service-housewarming-pooja.webp",
+    "width": 1370,
+    "height": 1148,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 197
+  },
+  {
+    "file": "service-corporate-event.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 280
+  },
+  {
+    "file": "service-lotus-arrangement.webp",
+    "width": 1351,
+    "height": 1164,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 158
+  },
+  {
+    "file": "gallery-outdoor-floral-arch.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Gallery illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 365
+  },
+  {
+    "file": "service-event-banquet.webp",
+    "width": 1370,
+    "height": 1148,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 192
+  },
+  {
+    "file": "service-brass-lamp-detail.webp",
+    "width": 1312,
+    "height": 1199,
+    "use": "Service illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 146
+  },
+  {
+    "file": "heritage-floral-swing.webp",
+    "width": 1370,
+    "height": 1148,
+    "use": "Heritage illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 317
+  },
+  {
+    "file": "cta-floral-jasmine-detail.webp",
+    "width": 1536,
+    "height": 1024,
+    "use": "Closing CTA illustration",
+    "source": "standalone AI-generated illustrative concept",
+    "size_kb": 83
+  },
+  {
+    "file": "gallery-royal-mandap-wide.webp",
+    "width": 1672,
+    "height": 941,
+    "use": "Large wedding portfolio photo",
+    "source": "standalone generated image",
+    "size_kb": 567
+  }
+]
