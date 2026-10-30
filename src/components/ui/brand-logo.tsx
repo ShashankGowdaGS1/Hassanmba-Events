@@ -10,7 +10,7 @@ export interface BrandLogoProps {
   isLink?: boolean;
   priority?: boolean;
   isOverlay?: boolean;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 export function BrandLogo({ variant = "full", className, isLink = true, priority = false, isOverlay = false, onClick }: BrandLogoProps) {

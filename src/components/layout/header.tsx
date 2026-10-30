@@ -7,6 +7,7 @@ import { DesktopNav } from "./desktop-nav";
 import { MobileNav } from "./mobile-nav";
 import { PrimaryCta } from "./primary-cta";
 import { cn } from "@/lib/utils";
+import { scrollHomeOnCurrentPage } from "./home-logo";
 
 export interface HeaderProps {
   /**
@@ -66,6 +67,7 @@ export function Header({ hasHeroOverlay = true, className }: HeaderProps) {
           <BrandLogo
             variant="full"
             isOverlay={isOverlayMode}
+            onClick={scrollHomeOnCurrentPage}
           />
         </div>
 

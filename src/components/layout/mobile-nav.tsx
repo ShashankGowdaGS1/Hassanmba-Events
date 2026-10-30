@@ -9,6 +9,7 @@ import { BUSINESS_DATA } from "@/data/business";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { PrimaryCta } from "./primary-cta";
 import { cn } from "@/lib/utils";
+import { scrollHomeOnCurrentPage } from "./home-logo";
 
 export interface MobileNavProps {
   isOverlay?: boolean;
@@ -107,7 +108,7 @@ export function MobileNav({ isOverlay = false }: MobileNavProps) {
         >
           {/* Top Bar */}
           <div className="h-[68px] sm:h-[76px] px-4 sm:px-6 border-b border-gold-antique/25 flex items-center justify-between shrink-0 bg-ivory">
-            <BrandLogo variant="compact" isLink onClick={handleClose} />
+            <BrandLogo variant="compact" isLink onClick={(event) => { handleClose(); scrollHomeOnCurrentPage(event); }} />
 
             <button
               ref={closeButtonRef}
